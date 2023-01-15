@@ -5,7 +5,7 @@
 }
 
 body {
-  background: url(../public/images/confetti-doodles.svg);
+  background: url(../public/images/background.svg);
 }
 
 .container {
@@ -15,13 +15,36 @@ body {
   justify-content: center;
 }
 .container .main {
-  width: 1354px;
-  height: 80vh;
+  width: 1200px;
+  height: 75vh;
 }
 .container .main .welcome {
-  background: rgba(217, 158, 145, 0.862745098);
+  display: flex;
+  background: linear-gradient(0deg, #D99E91, rgba(224, 177, 167, 0.862745098));
   border-radius: 25px 0px 0px 25px;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  justify-content: center;
+  padding: 50px;
+}
+.container .main .welcome .welcome-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.container .main .welcome .welcome-content h1,
+.container .main .welcome .welcome-content h3 {
+  text-align: center;
+  font-weight: bold;
+  color: #FFFFFF;
+  -webkit-text-stroke: 1px #252525;
+}
+.container .main .welcome .welcome-content__images {
+  margin-top: 40px;
+  display: flex;
+  align-items: baseline;
+  translate: 50px;
 }
 .container .main .login {
   display: flex;
@@ -32,6 +55,9 @@ body {
   border-radius: 0px 25px 25px 0px;
   padding: 20px;
   box-shadow: rgba(0, 0, 0, 0.19) 5px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.container .main .login h3 {
+  text-align: center;
 }
 .container .main .login a {
   padding: 5px 10px;
@@ -54,17 +80,35 @@ body {
   margin: 3vh 0;
 }
 .container .main .login .login-form__username, .container .main .login .login-form__password {
-  max-width: 350px;
-}
-.container .main .login .login-form__username span, .container .main .login .login-form__password span {
-  border-radius: 22px;
-  height: 62px;
-  border: 1px solid #252525;
+  max-width: 250px;
 }
 .container .main .login .login-form__username input, .container .main .login .login-form__password input {
   border-radius: 0 22px 22px 0;
   height: 62px;
   border: 1px solid #252525;
+}
+.container .main .login .login-form__username .input-password, .container .main .login .login-form__password .input-password {
+  border-width: 1px 0px 1px 1px;
+}
+.container .main .login .login-form__username__key-pass, .container .main .login .login-form__password__key-pass {
+  border-radius: 22px;
+  border: 1px solid #252525;
+  border-width: 1px 1px 1px 0;
+  font-size: 1.3rem;
+  background-color: #FFFFFF;
+}
+.container .main .login .login-form__username__key-pass:hover, .container .main .login .login-form__password__key-pass:hover {
+  cursor: pointer;
+}
+.container .main .login .login-form__key {
+  border-radius: 22px;
+  height: 62px;
+  border: 1px solid #252525;
+  background-color: #D99E91;
+}
+.container .main .login .login-form__key .bi {
+  color: #FFFFFF;
+  font-size: 1.4rem;
 }
 .container .main .login .login-form__checkbox input {
   border: 1px solid #252525;

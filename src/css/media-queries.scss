@@ -1,10 +1,39 @@
+@media (max-width: 991px) {
+    .container {
+        .main {
+            .welcome {
+                .welcome-content {
+                    &__images {
+                        translate: 0;
+
+                        .dog {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 767px) {
     .container {
         .main {
             .welcome {
                 border-radius: 25px 25px 0px 0px;
                 border-width: 1px 1px 0 1px;
+                padding: 0;
 
+                .welcome-content {
+                    &__images {
+                        margin: 0;
+
+                        .woman {
+                            display: none;
+
+                        }
+                    }
+                }
             }
 
             .login {

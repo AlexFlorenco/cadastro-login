@@ -12,7 +12,7 @@ $black-color: #252525;
 }
 
 body {
-    background: url(../public/images/confetti-doodles.svg);
+    background: url(../public/images/background.svg);
 }
 
 .container {
@@ -22,17 +22,39 @@ body {
     justify-content: center;
 
     .main {
-        width: 784px + 570px;
-        height: 80vh;
+        width: 1200px;
+        height: 75vh;
 
         .welcome {
-            background: $main-color--opaque;
-            // border-width: 1.5px 0px 1.5px 1.5px;
-            // border-style: solid;
-            // border-color: $black-color;
+            display: flex;
+            background: linear-gradient(0deg, #D99E91, #e0b1a7dc);
             border-radius: 25px 0px 0px 25px;
             box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+            justify-content: center;
+            padding: 50px;
 
+            .welcome-content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+                h1,
+                h3 {
+                    text-align: center;
+                    font-weight: bold;
+                    color: $white-color;
+                    -webkit-text-stroke: 1px #252525;
+                }
+
+                &__images {
+                    margin-top: 40px;
+                    display: flex;
+                    align-items: baseline;
+                    translate: 50px;
+                }
+            }
         }
 
         .login {
@@ -45,6 +67,10 @@ body {
             border-radius: 0px 25px 25px 0px;
             padding: 20px;
             box-shadow: rgba(0, 0, 0, 0.19) 5px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+            h3 {
+                text-align: center;
+            }
 
             a {
                 padding: 5px 10px;
@@ -70,22 +96,46 @@ body {
 
                 &__username,
                 &__password {
-                    max-width: 350px;
-
-                    span {
-                        border-radius: 22px;
-                        height: 62px;
-                        border: 1px solid $black-color;
-                    }
+                    max-width: 250px;
 
                     input {
                         border-radius: 0 22px 22px 0;
                         height: 62px;
                         border: 1px solid $black-color;
 
-
                     }
+
+                    .input-password {
+                        border-width: 1px 0px 1px 1px;
+                    }
+
+                    &__key-pass {
+                        border-radius: 22px;
+                        border: 1px solid $black-color;
+                        border-width: 1px 1px 1px 0;
+                        font-size: 1.3rem;
+                        background-color: $white-color;
+
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+
                 }
+
+                &__key {
+                    border-radius: 22px;
+                    height: 62px;
+                    border: 1px solid $black-color;
+                    background-color: $main-color;
+
+                    .bi {
+                        color: $white-color;
+                        font-size: 1.4rem;
+                    }
+
+                }
+
 
                 &__checkbox {
                     input {

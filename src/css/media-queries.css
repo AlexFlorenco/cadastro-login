@@ -1,7 +1,22 @@
+@media (max-width: 991px) {
+  .container .main .welcome .welcome-content__images {
+    translate: 0;
+  }
+  .container .main .welcome .welcome-content__images .dog {
+    display: none;
+  }
+}
 @media (max-width: 767px) {
   .container .main .welcome {
     border-radius: 25px 25px 0px 0px;
     border-width: 1px 1px 0 1px;
+    padding: 0;
+  }
+  .container .main .welcome .welcome-content__images {
+    margin: 0;
+  }
+  .container .main .welcome .welcome-content__images .woman {
+    display: none;
   }
   .container .main .login {
     border-radius: 0px 0px 25px 25px;
