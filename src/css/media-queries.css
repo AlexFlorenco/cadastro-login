@@ -1,0 +1,22 @@
+@media (max-width: 767px) {
+  .container .main .welcome {
+    border-radius: 25px 25px 0px 0px;
+    border-width: 1px 1px 0 1px;
+  }
+  .container .main .login {
+    border-radius: 0px 0px 25px 25px;
+  }
+}
+@media (max-width: 575px) {
+  .container {
+    align-items: inherit;
+    overflow: hidden;
+  }
+  .container .main .welcome {
+    display: none;
+  }
+  .container .main .login {
+    height: 100vh;
+    border-radius: 0px 0px 25px 25px;
+  }
+}/*# sourceMappingURL=media-queries.css.map */
