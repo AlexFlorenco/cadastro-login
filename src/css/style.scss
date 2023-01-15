@@ -1,6 +1,9 @@
 $main-color: #D99E91;
+$main-color--opaque: #d99e91dc;
 $secondary-color: #A6705D;
 $white-color: #FFFFFF;
+$white-color--opaque: #ffffffdc;
+$black-color: #252525;
 
 * {
     margin: 0;
@@ -23,10 +26,10 @@ body {
         height: 80vh;
 
         .welcome {
-            background: $main-color;
-            border-width: 1.5px 0px 1.5px 1.5px;
-            border-style: solid;
-            border-color: #000000;
+            background: $main-color--opaque;
+            // border-width: 1.5px 0px 1.5px 1.5px;
+            // border-style: solid;
+            // border-color: $black-color;
             border-radius: 25px 0px 0px 25px;
             box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 
@@ -37,20 +40,33 @@ body {
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            background: $white-color;
-            border-style: solid;
-            border-color: #000000;
-            border-width: 1.5px;
+            background: $white-color--opaque;
+            // border: 1.5px solid $black-color;
             border-radius: 0px 25px 25px 0px;
+            padding: 20px;
             box-shadow: rgba(0, 0, 0, 0.19) 5px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 
+            a {
+                padding: 5px 10px;
+                margin: 5px 0;
+                border-radius: 10px;
+                font-size: 1.1rem;
+                color: $black-color;
+                text-decoration: none;
+                box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+
+                &:hover {
+                    background-color: #f2f2f2;
+                    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+                }
+            }
 
             .login-form {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-
+                margin: 3vh 0;
 
                 &__username,
                 &__password {
@@ -59,13 +75,13 @@ body {
                     span {
                         border-radius: 22px;
                         height: 62px;
-                        border: 1px solid rgb(81, 81, 81);
+                        border: 1px solid $black-color;
                     }
 
                     input {
                         border-radius: 0 22px 22px 0;
                         height: 62px;
-                        border: 1px solid rgb(81, 81, 81);
+                        border: 1px solid $black-color;
 
 
                     }
@@ -73,17 +89,22 @@ body {
 
                 &__checkbox {
                     input {
-                        border: 1px solid rgb(81, 81, 81);
+                        border: 1px solid $black-color;
 
+                        &:hover {
+                            cursor: pointer;
+                        }
                     }
+
                 }
 
                 &__button {
-                    background-color: $main-color;
-                    font-weight: bold;
-                    border: 1px solid rgb(81, 81, 81);
                     width: 166px;
                     height: 52px;
+                    border: 1px solid $black-color;
+                    background-color: $main-color;
+                    font-weight: bold;
+                    margin-top: 3vh;
 
                     &:hover {
                         background-color: $secondary-color;
